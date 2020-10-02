@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 1.7;
+    position: relative;
+}
+
+/**************************** HOME SECTION *******************************/
+
+.main-logo {
+    -webkit-box-shadow: 0px 7px 10px 0px rgba(153, 147, 153, 0.68);
+    -moz-box-shadow: 0px 7px 10px 0px rgba(153, 147, 153, 0.68);
+    box-shadow: 0px 7px 10px 0px rgba(153, 147, 153, 0.68);
+    background-color: lightgrey;
+    color: #333333;
+    padding: 0px 40px;
+    max-height: 50px;
+}
+
+.logo-title {
+    float: left;
+}
+
+.logo-title a {
+    text-decoration: none;
+    color: #333333;
+}
+
+.logo-title a:hover {
+    color: white;
+    transition: all 0.6s ease;
+}
+
+.logo-title h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 7px;
+}
+
+.logo-icons {
+    float: right;
+}
+
+.logo-icons a {
+    text-decoration: none;
+    color: #333333;
+}
+
+.logo-icons a:visited {
+    color: #333333;
+}
+
+.logo-icons a ion-icon {
+    font-size: 25px;
+    padding: 10px 10px;
+}
+
+.logo-icons a ion-icon:hover {
+    color: white;
+    transition: all 0.6s ease;
+}
+
+.main-logo:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/**************************** ABOUT STORE SECTION ************************/
+/**************************** PRODUCTS SECTION ***************************/
+/**************************** CONTACT SECTION ****************************/
