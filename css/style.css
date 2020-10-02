@@ -19,7 +19,7 @@ body {
     -webkit-box-shadow: 0px 7px 10px 0px rgba(153, 147, 153, 0.68);
     -moz-box-shadow: 0px 7px 10px 0px rgba(153, 147, 153, 0.68);
     box-shadow: 0px 7px 10px 0px rgba(153, 147, 153, 0.68);
-    background-color: lightgrey;
+    background-color: #936088;
     color: #333333;
     padding: 0px 40px;
     max-height: 50px;
@@ -39,7 +39,7 @@ body {
 }
 
 .logo-title a h3:hover {
-    opacity: 0.4;
+    color: white;
     
 }
 
@@ -49,27 +49,27 @@ body {
     padding-top: 7px;
 }
 
-.logo-icons {
+.cart {
     float: right;
 }
 
-.logo-icons a {
+.cart a {
     text-decoration: none;
     color: #333333;
 }
 
-.logo-icons a:visited {
+.cart a:visited {
     color: #333333;
 }
 
-.logo-icons a ion-icon {
+.cart a ion-icon {
     font-size: 25px;
     padding: 10px 10px;
     transition: 0.5s;
 }
 
-.logo-icons a ion-icon:hover {
-    opacity: 0.4;
+.cart a ion-icon:hover {
+    color: white;
 }
 
 .main-logo:after {
@@ -106,11 +106,10 @@ header a h1:hover {
 /* NAV */
 
 nav {
-    width: 100%;
     height: 60px;
     background-color: white;
+    width: 80%;
     margin: 0 auto;
-    width: 80vw;
 }
 
 nav>ul {
@@ -146,38 +145,105 @@ nav>ul>li>a:hover {
 padding-bottom: 40px;
 }
 
+/* FOOTER */
+footer {
+    background-color:  #936088;
+    color: #333333;
+    padding: 20px 40px;
+}
+
+
+.footer-text {
+    float: left;
+    padding-top: 17px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.footer-text ion-icon {
+    color: red;
+}
+
+.footer-text p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.social {
+    float: right;
+    margin-top: 12px;
+}
+
+.social a {
+    text-decoration: none;
+}
+
+.social a:visited {
+    color: #333333;
+}
+
+.social a ion-icon {
+    font-size: 25px;
+    padding: 10px 10px;
+}
+
+.social a ion-icon:hover {
+    color: white;
+    transition: all 0.5s ease;
+}
+
+footer:after {
+    content: '';
+    display: block;
+    clear: both;
+}
 /**************************** ABOUT STORE SECTION ************************/
+.cards_field {
+    width: 100%;
+}
+
+.div_card {
+    margin: 10px 0;
+}
+
+.p_card {
+    font-size: 18px;
+    text-align: justify;
+}
+
+.img-about {
+    padding: 20px;
+    height: 450px
+}
+
+
 /**************************** PRODUCTS SECTION ***************************/
 
+.container,
 .products-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 50px;
     padding-bottom: 100px;
-    padding-top: 20px;
 }
 
-.product {
+.image {
     margin-right: 20px;
     margin-left: 20px;
     position: relative;
     overflow: hidden;
 }
 
-.product img {
-    width: 220px;
+.image img {
+    width: 180px;
 }
 
-.product h4 {
-    font-size: 18px;
-    text-align: center;
-}
 
 .add-cart {
     position: absolute;
     width: 100%;
-    background-color: darkgrey;
+    background-color:  #936088;
     transition: all 0.3s ease-in-out;
     opacity: 0;
     cursor: pointer;
@@ -185,16 +251,156 @@ padding-bottom: 40px;
     color: black;
 }
 
-.product:hover .cart1,
-.product:hover .cart2,
-.product:hover .cart3,
-.product:hover .cart4 {
-    bottom: 60px;
-    opacity: 0.8;
+.image:hover .cart1,
+.image:hover .cart2,
+.image:hover .cart3,
+.image:hover .cart4 {
+    bottom: 65px;
+    opacity: 1;
     padding: 10px;
     text-decoration: none;
     color: black;
 }
 
-
 /**************************** CONTACT SECTION ****************************/
+#contact-div {
+    width: 100%;
+    height: 100vh;
+}
+
+.contact_media {
+    width: 100vw;
+    text-align: center;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+}
+
+.fb {
+    width: 100px;
+    height: 150px;
+    border-radius: 5px;
+    background-color: #4668b3;
+}
+
+.fb:hover {
+    opacity: 0.8;
+}
+
+.ig {
+    width: 100px;
+    height: 150px;
+    border-radius: 5px;
+    background-color: #e1306c;
+}
+
+.ig:hover {
+    opacity: 0.8;
+}
+
+.phone {
+    width: 100px;
+    height: 150px;
+    border-radius: 5px;
+    background-color: #53d769;
+}
+
+.phone:hover {
+    opacity: 0.8;
+}
+
+.mail {
+    width: 100px;
+    height: 150px;
+    border-radius: 5px;
+    background-color: #d95333;
+}
+
+.mail:hover {
+    opacity: 0.8;
+}
+
+/**************************** BASKET SECTION ****************************/
+
+.products-container {
+    max-width: 650px;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.products-container ion-icon {
+    font-size: 25px;
+    color: blue;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.product-header {
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 4px solid lightgrey;
+    margin: 0 auto;
+}
+
+.product-title {
+    width: 45%;
+}
+
+.price {
+    width: 15%;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+}
+
+.quantity {
+    width: 30%;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+}
+
+.total {
+    width: 10%;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+}
+
+.product {
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid lightgrey;
+}
+
+.products {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.products img {
+    width: 75px;
+}
+
+.basketTotalContainer {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.basketTotalTitle {
+    width: 30%;
+}
+
+.basketTotal {
+    width: 10%;
+}
