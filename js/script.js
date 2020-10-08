@@ -100,11 +100,11 @@ function displayCart() {
             productContainer.innerHTML += `
             <div class="product">
                 <ion-icon name="close-circle-outline"></ion-icon>
-                <img src="./img/${item.tag}.jpg">
+                <img src="../img/${item.tag}.jpg">
                 <span>${item.name}</span>
             </div>
             <div class="price">
-                $${item.price},00
+                ${item.price},00 zł
             </div>
             <div class="quantity">
                 <ion-icon name="arrow-back-circle-outline"></ion-icon>
@@ -112,7 +112,7 @@ function displayCart() {
                 <ion-icon name="arrow-forward-circle-outline"></ion-icon>
             </div>
             <div class="total">
-                $${item.inCart * item.price},00
+                ${item.inCart * item.price},00 zł
             </div>
             `
         });
@@ -120,10 +120,10 @@ function displayCart() {
         productContainer.innerHTML += `
             <div class="basketTotalContainer">
                 <h4 class="basketTotalTitle">
-                    Basket Total
+                    Łącznie
                 </h4>
                 <h4 class="basketTotal">
-                    $${cartCost},00
+                    ${cartCost},00 zł
                 </h4>
             </div>
         `;

@@ -150,6 +150,13 @@ footer {
     background-color:  #936088;
     color: #333333;
     padding: 20px 40px;
+    -webkit-box-shadow: 0px -7px 10px 0px rgba(153, 147, 153, 0.68);
+    -moz-box-shadow: 0px -7px 10px 0px rgba(153, 147, 153, 0.68);
+    box-shadow: 0px -7px 10px 0px rgba(153, 147, 153, 0.68);
+    /* position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0; */
 }
 
 
@@ -268,58 +275,6 @@ footer:after {
     height: 100vh;
 }
 
-.contact_media {
-    width: 100vw;
-    text-align: center;
-    bottom: 0;
-    right: 0;
-    position: fixed;
-}
-
-.fb {
-    width: 100px;
-    height: 150px;
-    border-radius: 5px;
-    background-color: #4668b3;
-}
-
-.fb:hover {
-    opacity: 0.8;
-}
-
-.ig {
-    width: 100px;
-    height: 150px;
-    border-radius: 5px;
-    background-color: #e1306c;
-}
-
-.ig:hover {
-    opacity: 0.8;
-}
-
-.phone {
-    width: 100px;
-    height: 150px;
-    border-radius: 5px;
-    background-color: #53d769;
-}
-
-.phone:hover {
-    opacity: 0.8;
-}
-
-.mail {
-    width: 100px;
-    height: 150px;
-    border-radius: 5px;
-    background-color: #d95333;
-}
-
-.mail:hover {
-    opacity: 0.8;
-}
-
 /**************************** BASKET SECTION ****************************/
 
 .products-container {
@@ -403,4 +358,83 @@ footer:after {
 
 .basketTotal {
     width: 10%;
+}
+
+/* PROFILE SECTION */
+.profile-container {
+    height: 100%;
+}
+
+.profile-window {
+    background-color: white;
+    border-radius: 5px;
+    width: 300px;
+    padding: 20px 50px;
+    margin: 40px auto 0 auto;
+    -webkit-box-shadow: 3px 3px 30px 5px rgba(204, 204, 204, 0.9);
+    -moz-box-shadow: 3px 3px 30px 5px rgba(204, 204, 204, 0.9);
+    box-shadow: 3px 3px 30px 5px rgba(204, 204, 204, 0.9);
+}
+
+.profile-window h2, h4 {
+    text-align: center;
+    color: #666;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+
+input[type=text],
+input[type=password] {
+    width: 300px;
+    background-color: #efefef;
+    color: #666;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    margin-top: 10px;
+}
+
+input[type=text]:focus,
+input[type=password]:focus {
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(204, 204, 204, 0.9);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(204, 204, 204, 0.9);
+    box-shadow: 0px 0px 10px 2px rgba(204, 204, 204, 0.9);
+    border: 2px solid rgb(228, 163, 173);
+    background-color: #e9f3e9;
+    color: rgb(228, 163, 173);
+}
+
+input[type=submit] {
+    width: 300px;
+    background-color: rgb(228, 163, 173);
+    font-size: 20px;
+    color: white;
+    padding: 15px 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    outline: none;
+}
+
+input[type=submit]:focus {
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(204, 204, 204, 0.9);
+    -moz-box-shadow: 0px 0px 15px 5px rgba(204, 204, 204, 0.9);
+    box-shadow: 0px 0px 15px 5px rgba(204, 204, 204, 0.9);
+}
+
+input[type=submit]:hover {
+    background-color: rgb(250, 200, 200);
+}
+
+input::-webkit-input-placeholder {
+    color: #999;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: rgb(250, 200, 200);
 }
