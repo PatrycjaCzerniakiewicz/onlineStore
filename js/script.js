@@ -1,26 +1,26 @@
 let carts = document.querySelectorAll('.add-cart');
 
 let products = [{
-        name: 'Krem do twarzy nr 1',
-        tag: 'firstcream',
+        name: 'Krem do twarzy 1',
+        tag: 'krem1',
         price: 15,
         inCart: 0
     },
     {
-        name: 'Krem do twarzy nr 2',
-        tag: 'secondcream',
+        name: 'Krem do twarzy 2',
+        tag: 'krem2',
         price: 20,
         inCart: 0
     },
     {
-        name: 'Krem do twarzy nr 3',
-        tag: 'thirdcream',
+        name: 'Krem do twarzy 3',
+        tag: 'krem3',
         price: 10,
         inCart: 0
     },
     {
-        name: 'Krem do twarzy nr 4',
-        tag: 'fourthcream',
+        name: 'Krem do twarzy 4',
+        tag: 'krem4',
         price: 25,
         inCart: 0
     },
@@ -119,12 +119,12 @@ function displayCart() {
 
         productContainer.innerHTML += `
             <div class="basketTotalContainer">
-                <h4 class="basketTotalTitle">
+                <h5 class="basketTotalTitle">
                     Łącznie
-                </h4>
-                <h4 class="basketTotal">
+                </h5>
+                <h5 class="basketTotal">
                     ${cartCost},00 zł
-                </h4>
+                </h5>
             </div>
         `;
 
@@ -133,3 +133,9 @@ function displayCart() {
 
 onLoadCartNumbers();
 displayCart();
+
+// REGISTER
+
+$('.message a').click(function() {
+    $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+});

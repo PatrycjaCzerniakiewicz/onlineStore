@@ -11,6 +11,7 @@ body {
     position: relative;
 }
 
+
 /**************************** HOME SECTION *******************************/
 
 /* MAIN-LOGO */
@@ -64,8 +65,15 @@ body {
 
 .cart a ion-icon {
     font-size: 25px;
-    padding: 10px 10px;
     transition: 0.5s;
+}
+
+.profile-icon {
+    padding: 10px 10px;
+}
+
+.basket-icon {
+    padding: 10px 0px;
 }
 
 .cart a ion-icon:hover {
@@ -141,8 +149,17 @@ nav>ul>li>a:hover {
 
 /* MAIN-DIV */
 
-.main-div {
+.carousel-div {
 padding-bottom: 40px;
+}
+
+.img-carousel {
+    height: 600px;
+    width: 900px;
+}
+
+.span-block {
+    display: inline-block;
 }
 
 /* FOOTER */
@@ -153,10 +170,6 @@ footer {
     -webkit-box-shadow: 0px -7px 10px 0px rgba(153, 147, 153, 0.68);
     -moz-box-shadow: 0px -7px 10px 0px rgba(153, 147, 153, 0.68);
     box-shadow: 0px -7px 10px 0px rgba(153, 147, 153, 0.68);
-    /* position: absolute;
-    width: 100%;
-    left: 0;
-    bottom: 0; */
 }
 
 
@@ -165,10 +178,6 @@ footer {
     padding-top: 17px;
     font-weight: bold;
     font-size: 20px;
-}
-
-.footer-text ion-icon {
-    color: red;
 }
 
 .footer-text p {
@@ -255,7 +264,7 @@ footer:after {
     opacity: 0;
     cursor: pointer;
     text-align: center;
-    color: black;
+    color: #333333;
 }
 
 .image:hover .cart1,
@@ -269,10 +278,87 @@ footer:after {
     color: black;
 }
 
+.a-product {
+    text-decoration: none;
+    color: #333333;
+}
+
+.a-product:hover {
+    text-decoration: none;
+    color: #333333;
+}
+
+/* CREAM SECTION */
+
+.col-md-7 {
+    margin-top: 100px;
+    padding: 0 30px 0 0;
+}
+
+.col-md-7 h2{
+    color: #555555;
+}
+
+.cart-cream {
+    background-color: #936088;
+    opacity: 1;
+    text-decoration: none;
+    font-size: 15px;
+    width: 150px;
+    border-radius: 5px;
+    line-height: 40px;
+    color: #333333;
+    font-weight: 600;
+}
+
+.cart-cream:hover {
+    opacity: 0.7;
+    text-decoration: none;
+    color: #333333;
+}
+
+.col-md-7 .price {
+    color: #fe980f;
+    font-size: 26px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.img-cream {
+    padding: 100px;
+}
+
+.description-cream {
+    text-align: justify;
+}
+
+
 /**************************** CONTACT SECTION ****************************/
 #contact-div {
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    padding: 70px 0;
+}
+
+
+.form-group {
+    width:600px;
+    margin: 0 auto;
+}
+
+.contact-button {
+    margin-top: 10px;
+    background-color: #936088;
+    padding: 10px;
+    font-size: 15px;
+    width: 100px;
+    transition: all 0.3s ease-in-out;
+    border: none;
+}
+
+.contact-button:hover {
+    background-color: #936088;
+    opacity: 0.7;
 }
 
 /**************************** BASKET SECTION ****************************/
@@ -280,13 +366,12 @@ footer:after {
 .products-container {
     max-width: 650px;
     justify-content: space-around;
-    margin: 0 auto;
-    margin-top: 50px;
+    margin: 150px auto 350px;
 }
 
 .products-container ion-icon {
     font-size: 25px;
-    color: blue;
+    color: #936088;
     margin-left: 10px;
     margin-right: 10px;
     cursor: pointer;
@@ -360,81 +445,70 @@ footer:after {
     width: 10%;
 }
 
-/* PROFILE SECTION */
-.profile-container {
-    height: 100%;
+
+
+/* REGISTER */
+
+
+.login-page{
+    width: 400px;
+    padding: 10% 0 0;
+    margin: auto;
 }
 
-.profile-window {
-    background-color: white;
-    border-radius: 5px;
-    width: 300px;
-    padding: 20px 50px;
-    margin: 40px auto 0 auto;
-    -webkit-box-shadow: 3px 3px 30px 5px rgba(204, 204, 204, 0.9);
-    -moz-box-shadow: 3px 3px 30px 5px rgba(204, 204, 204, 0.9);
-    box-shadow: 3px 3px 30px 5px rgba(204, 204, 204, 0.9);
-}
-
-.profile-window h2, h4 {
+.form{
+    position: relative;
+    z-index: 1;
+    background: #936088;
+    max-width: 0 auto 100px;
+    padding: 40px;
     text-align: center;
-    color: #666;
-    margin-top: 10px;
-    letter-spacing: 2px;
+    margin-bottom: 150px;
+    border-radius: 5px;
 }
 
-input[type=text],
-input[type=password] {
-    width: 300px;
-    background-color: #efefef;
-    color: #666;
-    border: 2px solid #ddd;
+.form input {
+    font-family: "Roboto", sans-serif;
+    outline: 1;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
     border-radius: 5px;
-    font-size: 20px;
-    padding: 10px;
+    margin: 0 0 15px;
+    padding: 15px;
     box-sizing: border-box;
-    outline: none;
-    margin-top: 10px;
+    font-size: 14px;
 }
 
-input[type=text]:focus,
-input[type=password]:focus {
-    -webkit-box-shadow: 0px 0px 10px 2px rgba(204, 204, 204, 0.9);
-    -moz-box-shadow: 0px 0px 10px 2px rgba(204, 204, 204, 0.9);
-    box-shadow: 0px 0px 10px 2px rgba(204, 204, 204, 0.9);
-    border: 2px solid rgb(228, 163, 173);
-    background-color: #e9f3e9;
-    color: rgb(228, 163, 173);
-}
-
-input[type=submit] {
-    width: 300px;
-    background-color: rgb(228, 163, 173);
-    font-size: 20px;
-    color: white;
-    padding: 15px 10px;
-    margin-top: 20px;
-    border: none;
+.form button{
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #4caf50;
+    width: 100%;
+    border: 0;
     border-radius: 5px;
+    padding: 15px;
+    color: #ffffff;
+    font-size: 14px;
     cursor: pointer;
-    letter-spacing: 2px;
-    outline: none;
 }
 
-input[type=submit]:focus {
-    -webkit-box-shadow: 0px 0px 15px 5px rgba(204, 204, 204, 0.9);
-    -moz-box-shadow: 0px 0px 15px 5px rgba(204, 204, 204, 0.9);
-    box-shadow: 0px 0px 15px 5px rgba(204, 204, 204, 0.9);
+.form button:hover, .form button:active{
+    background: #43a047;
 }
 
-input[type=submit]:hover {
-    background-color: rgb(250, 200, 200);
+.form .message{
+    margin: 15px 0 0;
+    color: aliceblue;
+    font-size: 12px;
 }
 
-input::-webkit-input-placeholder {
-    color: #999;
+.form .message a {
+    color: #4caf50;
+    text-decoration: none;
 }
 
-input:focus::-webkit-input-placeholder {
-    color: rgb(250, 200, 200);
+.form .register-form{
+    display: none;
 }
