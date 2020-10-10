@@ -98,22 +98,19 @@ function displayCart() {
         productContainer.innerHTML = '';
         Object.values(cartItems).map(item => {
             productContainer.innerHTML += `
-            <div class="product">
-                <ion-icon name="close-circle-outline"></ion-icon>
-                <img src="../img/${item.tag}.jpg">
-                <span>${item.name}</span>
-            </div>
-            <div class="price">
-                ${item.price},00 zł
-            </div>
-            <div class="quantity">
-                <ion-icon name="arrow-back-circle-outline"></ion-icon>
-                <span>${item.inCart}</span>
-                <ion-icon name="arrow-forward-circle-outline"></ion-icon>
-            </div>
-            <div class="total">
-                ${item.inCart * item.price},00 zł
-            </div>
+                <div class="product">
+                    <img src="../img/${item.tag}.jpg">
+                    <span>${item.name}</span>
+                </div>
+                <div class="price">
+                    ${item.price},00 zł
+                </div>
+                <div class="quantity">
+                    <input class="cart-quantity-input" type="number" value="${item.inCart}">
+                </div>
+                <div class="total">
+                    <button class="btn btn-danger" type="button">REMOVE</button>
+                </div>
             `
         });
 
@@ -129,7 +126,20 @@ function displayCart() {
         `;
 
     }
+
+    var removeCart = document.getElementsByClassName('btn-danger')
+    for (var i = 0; i < removeCart.length; i++) {
+        var button = removeCart[i]
+        button.addEventListener('click',function(event) {
+            var buttonClicked = event.target
+            buttonClicked.parentElement.parentElement.remove()
+        })
+    }
+
 }
+
+
+
 
 onLoadCartNumbers();
 displayCart();
@@ -139,3 +149,6 @@ displayCart();
 $('.message a').click(function() {
     $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
 });
+
+
+
