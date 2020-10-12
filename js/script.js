@@ -101,15 +101,16 @@ function displayCart() {
                 <div class="product">
                     <img src="../img/${item.tag}.jpg">
                     <span>${item.name}</span>
-                </div>
-                <div class="price">
-                    ${item.price},00 zł
-                </div>
-                <div class="quantity">
-                    <input class="cart-quantity-input" type="number" value="${item.inCart}">
-                </div>
-                <div class="total">
-                    <button class="btn btn-danger" type="button">REMOVE</button>
+                
+                    <div class="price">
+                        ${item.price},00 zł
+                    </div>
+                    <div class="quantity">
+                        <input class="cart-quantity-input" type="number" value="${item.inCart}">
+                    </div>
+                    <div class="total">
+                        <button class="btn btn-danger" type="button">REMOVE</button>
+                    </div>
                 </div>
             `
         });
@@ -127,13 +128,45 @@ function displayCart() {
 
     }
 
-    var removeCart = document.getElementsByClassName('btn-danger')
-    for (var i = 0; i < removeCart.length; i++) {
-        var button = removeCart[i]
+    let removeCart = document.getElementsByClassName('btn-danger')
+    for (let i = 0; i < removeCart.length; i++) {
+        let button = removeCart[i]
         button.addEventListener('click',function(event) {
-            var buttonClicked = event.target
+            let buttonClicked = event.target
             buttonClicked.parentElement.parentElement.remove()
+            updateCartTotal()
         })
+
+        let quantityProducts = document.getElementsByClassName('cart-quantity-input')
+        for (let i = 0; i < quantityProducts.length; i++) {
+            let input = quantityProducts[i]
+            input.addEventListener('change', quantityChanged)
+        }
+    }
+
+    function quantityChanged(event) {
+        let input = event.target
+        if (isNaN(input.value) || input.value <= 0) {
+            input.value = 1
+        }
+        updateCartTotal
+    }
+
+    function updateCartTotal() {
+        let cartItemContainer = document.getElementsByClassName('products')[0]
+        let cartProducts = cartItemContainer.getElementsByClassName('product')
+        let total = 0
+        for (let i = 0; i < cartProducts.length; i++) {
+            let cartProduct = cartProducts[i]
+            let priceProduct = cartProduct.getElementsByClassName('price')[0]
+            let quantityProduct = cartProduct.getElementsByClassName('cart-quantity-input')[0]
+            console.log(priceProduct, quantityProduct)
+            let price = parseFloat(priceProduct.innerText.replace('zł', ''))
+            let quantity = quantityProduct.value
+            total = total + (price * quantity)
+        }
+        total = Math.round(total * 100) / 100
+        document.getElementsByClassName('basketTotal')[0].innerText = total + ',00 zł'
     }
 
 }

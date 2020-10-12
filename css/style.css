@@ -398,32 +398,29 @@ footer:after {
 }
 
 .product-title {
-    width: 45%;
+    width: 35%;
 }
 
 .price {
     width: 15%;
-    border-bottom: 1px solid lightgrey;
     display: flex;
     align-items: center;
 }
 
 .quantity {
-    width: 30%;
-    border-bottom: 1px solid lightgrey;
+    width: 35%;
     display: flex;
     align-items: center;
 }
 
 .total {
-    width: 10%;
-    border-bottom: 1px solid lightgrey;
+    width: 15%;
     display: flex;
     align-items: center;
 }
 
 .product {
-    width: 45%;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -431,14 +428,16 @@ footer:after {
     border-bottom: 1px solid lightgrey;
 }
 
+
 .products {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex;
+    flex-wrap: wrap; */
 }
 
 .products img {
     width: 75px;
+    border-radius: 10px;
 }
 
 .basketTotalContainer {
@@ -449,7 +448,7 @@ footer:after {
 }
 
 .basketTotalTitle {
-    width: 30%;
+    width: 15%;
 }
 
 .basketTotal {
