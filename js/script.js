@@ -109,7 +109,7 @@ function displayCart() {
                         <input class="cart-quantity-input" type="number" value="${item.inCart}">
                     </div>
                     <div class="total">
-                        <button class="btn btn-danger" type="button">REMOVE</button>
+                        <button class="btn btn-danger" type="button">Usuń</button>
                     </div>
                 </div>
             `
